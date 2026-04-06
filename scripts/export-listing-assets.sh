@@ -6,19 +6,16 @@ ROOT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 SOURCE_DIR="$ROOT_DIR/assets/marketplace"
 EXPORT_DIR="$SOURCE_DIR"
 
-if ! command -v qlmanage >/dev/null 2>&1; then
-  echo "qlmanage is required to export listing assets on macOS."
+CHROME_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+if [ ! -f "$CHROME_PATH" ]; then
+  echo "Google Chrome is required to export listing assets smoothly."
   exit 1
 fi
 
 mkdir -p "$EXPORT_DIR"
-rm -f "$EXPORT_DIR"/*.png "$EXPORT_DIR"/*.svg.png
 
-qlmanage -t -s 512 -o "$EXPORT_DIR" "$SOURCE_DIR/icon.svg" >/dev/null
-qlmanage -t -s 1600 -o "$EXPORT_DIR" "$SOURCE_DIR/banner.svg" >/dev/null
+"$CHROME_PATH" --headless --disable-gpu --window-size=1024,1024 --screenshot="$EXPORT_DIR/icon.png" "file://$SOURCE_DIR/icon.svg" >/dev/null 2>&1
+"$CHROME_PATH" --headless --disable-gpu --window-size=1600,900 --screenshot="$EXPORT_DIR/banner.png" "file://$SOURCE_DIR/banner.svg" >/dev/null 2>&1
 
-for file in "$EXPORT_DIR"/*.svg.png; do
-  mv "$file" "${file%.svg.png}.png"
-done
-
-echo "Exported marketplace icon and banner into assets/marketplace"
+echo "Exported marketplace icon and banner cleanly into assets/marketplace"
