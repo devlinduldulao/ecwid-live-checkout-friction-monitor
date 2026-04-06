@@ -1,0 +1,27 @@
+{
+  "name": "live-checkout-friction-monitor-ecwid",
+  "version": "0.2.0",
+  "description": "Static Ecwid admin dashboard for merchant checkout friction audits with no custom backend, database, or Redis.",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "assets:export": "sh scripts/export-listing-assets.sh",
+    "assets:capture": "node scripts/capture-marketplace-screenshots.js",
+    "start": "node scripts/serve-static.js build",
+    "dev": "node scripts/serve-static.js public",
+    "lint": "node --check public/app.js && node --check public/dashboard-core.js && node --check scripts/build.js && node --check scripts/serve-static.js && node --check scripts/smoke-test.js && node --check tests/dashboard-core.test.js && node --check tests/build.test.js",
+    "test": "node --test tests/*.test.js && node scripts/smoke-test.js",
+    "check": "npm run lint && npm test"
+  },
+  "keywords": [
+    "ecwid",
+    "lightspeed",
+    "checkout",
+    "friction",
+    "dashboard"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

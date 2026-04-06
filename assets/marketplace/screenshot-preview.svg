@@ -1,0 +1,29 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#EEDFC8"/>
+  <rect x="40" y="40" width="1520" height="920" rx="36" fill="#FBF5EC" stroke="#D8C8AF" stroke-width="8"/>
+  <rect x="88" y="88" width="1424" height="164" rx="28" fill="#FFF9F0" stroke="#DECDB6" stroke-width="6"/>
+  <text x="126" y="136" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24" font-weight="700" letter-spacing="4">OWNER PREVIEW MODE</text>
+  <text x="126" y="202" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">Simulate a merchant-ready dashboard</text>
+  <text x="126" y="232" fill="#6F6456" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24">The dashboard is using safe fake data so you can demo realistic friction spikes without touching live store data.</text>
+  <rect x="1244" y="126" width="214" height="58" rx="29" fill="#A84C35"/>
+  <text x="1294" y="162" fill="#FFF9F2" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24" font-weight="700">STOP PREVIEW</text>
+  <text x="1162" y="220" fill="#6F6456" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="22">Preview mode is on and using fake merchant data.</text>
+  <rect x="88" y="292" width="1424" height="608" rx="28" fill="#FFF9F1" stroke="#DDCCB6" stroke-width="6"/>
+  <rect x="128" y="340" width="444" height="230" rx="24" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <rect x="598" y="340" width="444" height="230" rx="24" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <rect x="1068" y="340" width="404" height="230" rx="24" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <text x="160" y="390" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">AUDIT SCORE</text>
+  <text x="160" y="488" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="110" font-weight="700">75</text>
+  <text x="324" y="488" fill="#6F6456" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="34">Stable</text>
+  <text x="630" y="390" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">PREVIEW DATASET</text>
+  <text x="630" y="468" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700">Preview Mercantile</text>
+  <text x="630" y="516" fill="#6F6456" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24">USD · US · Store ID standalone-demo</text>
+  <text x="1100" y="390" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">MODE</text>
+  <text x="1100" y="468" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700">Preview audit</text>
+  <rect x="128" y="610" width="1344" height="90" rx="22" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <rect x="128" y="728" width="1344" height="90" rx="22" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <text x="164" y="664" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700">Catalog availability</text>
+  <text x="164" y="782" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700">Low-stock products can increase checkout anxiety</text>
+  <text x="786" y="664" fill="#6F6456" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24">1 products are disabled. Check whether they should be live.</text>
+  <text x="786" y="782" fill="#6F6456" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24">3 products are at or below the low-stock threshold of 3.</text>
+</svg>

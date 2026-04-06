@@ -1,0 +1,41 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#EEDFC8"/>
+  <rect x="40" y="40" width="1520" height="920" rx="36" fill="#FBF5EC" stroke="#D8C8AF" stroke-width="8"/>
+  <rect x="88" y="88" width="628" height="824" rx="30" fill="#FFF9F1" stroke="#DDCCB6" stroke-width="6"/>
+  <text x="126" y="142" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="22" font-weight="700" letter-spacing="4">WORKSPACE PREFERENCES</text>
+  <text x="126" y="212" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="56" font-weight="700">Local Settings</text>
+  <rect x="126" y="274" width="552" height="88" rx="22" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <circle cx="172" cy="318" r="18" fill="#2E6A4C"/>
+  <rect x="162" y="308" width="20" height="20" rx="10" fill="#FFF9F2"/>
+  <text x="214" y="324" fill="#211B16" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24">Mirror the owner preview button and force fake data.</text>
+  <rect x="126" y="390" width="552" height="88" rx="22" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <circle cx="172" cy="434" r="18" fill="#C8B79E"/>
+  <text x="214" y="440" fill="#211B16" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24">Hide healthy checks and focus on warnings only.</text>
+  <text x="126" y="542" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">LOW STOCK THRESHOLD</text>
+  <rect x="126" y="566" width="552" height="72" rx="18" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <text x="158" y="612" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700">3</text>
+  <text x="126" y="700" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">OWNER NOTES</text>
+  <rect x="126" y="724" width="552" height="138" rx="18" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <text x="158" y="776" fill="#6F6456" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24">Audit seasonal catalog imagery before next campaign.</text>
+  <rect x="766" y="88" width="746" height="824" rx="30" fill="#FFF9F1" stroke="#DDCCB6" stroke-width="6"/>
+  <text x="804" y="142" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="22" font-weight="700" letter-spacing="4">MERCHANT PROFILE</text>
+  <text x="804" y="212" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="56" font-weight="700">Store Context</text>
+  <rect x="804" y="274" width="320" height="136" rx="22" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <rect x="1158" y="274" width="320" height="136" rx="22" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <rect x="804" y="438" width="320" height="136" rx="22" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <rect x="1158" y="438" width="320" height="136" rx="22" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <rect x="804" y="602" width="320" height="136" rx="22" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <rect x="1158" y="602" width="320" height="136" rx="22" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <text x="836" y="324" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">STORE</text>
+  <text x="836" y="374" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">Preview Mercantile</text>
+  <text x="1190" y="324" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">EMAIL</text>
+  <text x="1190" y="374" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">owner@example.com</text>
+  <text x="836" y="488" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">PHONE</text>
+  <text x="836" y="538" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">+1 555 0100</text>
+  <text x="1190" y="488" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">COUNTRY</text>
+  <text x="1190" y="538" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">US</text>
+  <text x="836" y="652" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">CURRENCY</text>
+  <text x="836" y="702" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">USD</text>
+  <text x="1190" y="652" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">LANGUAGE</text>
+  <text x="1190" y="702" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">en</text>
+</svg>

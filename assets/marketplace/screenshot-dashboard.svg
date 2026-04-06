@@ -1,0 +1,38 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#EEDFC8"/>
+  <rect x="40" y="40" width="1520" height="920" rx="36" fill="#FBF5EC" stroke="#D8C8AF" stroke-width="8"/>
+  <rect x="88" y="88" width="1424" height="220" rx="28" fill="#FFF9F0" stroke="#DECDB6" stroke-width="6"/>
+  <text x="126" y="136" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24" font-weight="700" letter-spacing="4">MERCHANT OPERATIONS VIEW</text>
+  <text x="126" y="214" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="700">Live Checkout Friction Monitor</text>
+  <text x="126" y="258" fill="#6F6456" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24">Admin-only checkout-readiness audit for Ecwid business owners</text>
+  <rect x="1274" y="118" width="184" height="42" rx="21" fill="#D7E7DE"/>
+  <text x="1311" y="146" fill="#2E6A4C" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">LIVE ECWID READ</text>
+  <text x="126" y="438" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="20" font-weight="700" letter-spacing="3">SIGNAL SNAPSHOT</text>
+  <rect x="88" y="470" width="904" height="430" rx="28" fill="#FFF9F1" stroke="#DDCCB6" stroke-width="6"/>
+  <rect x="122" y="532" width="246" height="148" rx="24" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <rect x="396" y="532" width="246" height="148" rx="24" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <rect x="670" y="532" width="246" height="148" rx="24" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <rect x="122" y="706" width="246" height="148" rx="24" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <rect x="396" y="706" width="246" height="148" rx="24" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <rect x="670" y="706" width="246" height="148" rx="24" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <text x="150" y="576" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">Enabled products</text>
+  <text x="150" y="642" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">48</text>
+  <text x="424" y="576" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">Low stock items</text>
+  <text x="424" y="642" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">6</text>
+  <text x="698" y="576" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">Missing images</text>
+  <text x="698" y="642" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">3</text>
+  <text x="150" y="750" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">Thin descriptions</text>
+  <text x="150" y="816" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">8</text>
+  <text x="424" y="750" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">Categories</text>
+  <text x="424" y="816" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">12</text>
+  <text x="698" y="750" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="18" font-weight="700">Coupons</text>
+  <text x="698" y="816" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">4</text>
+  <rect x="1032" y="470" width="480" height="430" rx="28" fill="#FFF9F1" stroke="#DDCCB6" stroke-width="6"/>
+  <text x="1066" y="524" fill="#7C5E38" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="20" font-weight="700" letter-spacing="3">OWNER ACTIONS</text>
+  <rect x="1066" y="560" width="412" height="88" rx="22" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <rect x="1066" y="668" width="412" height="88" rx="22" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <rect x="1066" y="776" width="412" height="88" rx="22" fill="#FFFDF9" stroke="#E5D9C8"/>
+  <text x="1096" y="606" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700">Low-stock products can increase checkout anxiety</text>
+  <text x="1096" y="714" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700">Thin product descriptions detected</text>
+  <text x="1096" y="822" fill="#211B16" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700">Product imagery gaps</text>
+</svg>
