@@ -32,7 +32,7 @@
       previewMode: Boolean(merged.previewMode),
       hideHealthyChecks: Boolean(merged.hideHealthyChecks),
       lowStockThreshold: Number.isFinite(threshold) ? Math.max(0, Math.min(50, Math.round(threshold))) : 3,
-      ownerNotes: String(merged.ownerNotes || '').trim(),
+      ownerNotes: String(merged.ownerNotes || '').trim().slice(0, 2000),
       lastSavedAt: String(merged.lastSavedAt || ''),
     };
   }

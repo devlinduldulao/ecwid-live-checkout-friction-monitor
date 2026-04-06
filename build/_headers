@@ -3,3 +3,4 @@
   X-Content-Type-Options: nosniff
   Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://djqizrxa6f10j.cloudfront.net; style-src 'self' https://djqizrxa6f10j.cloudfront.net; connect-src https://app.ecwid.com; img-src 'self' https: data:; font-src 'self' https://djqizrxa6f10j.cloudfront.net; frame-ancestors https://*.ecwid.com https://my.ecwid.com

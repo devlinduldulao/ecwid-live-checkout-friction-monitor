@@ -78,6 +78,25 @@ test('sanitizeSettings falls back when threshold is invalid', function () {
   assert.equal(sanitized.lowStockThreshold, 3);
 });
 
+test('sanitizeSettings caps ownerNotes at 2000 characters', function () {
+  const longNote = 'A'.repeat(3000);
+  const sanitized = core.sanitizeSettings({
+    ownerNotes: longNote,
+  });
+
+  assert.equal(sanitized.ownerNotes.length, 2000);
+});
+
+test('sanitizeSettings handles special characters in ownerNotes without crashing', function () {
+  const specialChars = '!@#$%^&*()_+-=[]{}|;:\'",.<>?/\\ \n\t' + '日本語 emoji 🔥';
+  const sanitized = core.sanitizeSettings({
+    ownerNotes: specialChars,
+  });
+
+  assert.equal(typeof sanitized.ownerNotes, 'string');
+  assert.ok(sanitized.ownerNotes.length > 0);
+});
+
 test('loadSettings returns defaults when storage is unavailable or invalid', function () {
   const brokenStorage = {
     getItem() {
