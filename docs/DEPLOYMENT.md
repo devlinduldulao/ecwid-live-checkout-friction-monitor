@@ -4,7 +4,7 @@ This repo is deployed as static files only.
 
 ## What you deploy
 
-Deploy the contents of `public/` to any static host.
+Deploy the built static output from `build/` to any static host.
 
 Examples:
 
@@ -32,10 +32,44 @@ npm run check
 ```
 
 2. Upload or publish the `public/` directory.
+2. Build the deployable output.
 
-3. Make sure the app is publicly reachable over HTTPS.
+```bash
+npm run build
+```
 
-4. Register that page URL in Ecwid.
+3. Upload or publish the `build/` directory.
+
+4. Make sure the app is publicly reachable over HTTPS.
+
+5. Register that page URL in Ecwid.
+
+## GitHub Pages via GitHub Actions
+
+This repo includes a ready-to-use workflow at `.github/workflows/deploy-pages.yml` for free deployment on GitHub Pages.
+
+What it does:
+
+- runs on every push to `main`
+- installs the Node.js toolchain on GitHub-hosted runners
+- runs `npm run check`
+- builds the static artifact with `npm run build`
+- deploys the `build/` directory to GitHub Pages
+
+One-time GitHub setup:
+
+1. Push the workflow to the repository.
+2. Open GitHub repository settings.
+3. Go to `Settings` -> `Pages`.
+4. Set `Source` to `GitHub Actions`.
+
+For this repository, GitHub Pages will publish at:
+
+```text
+https://devlinduldulao.github.io/ecwid-live-checkout-friction-monitor/
+```
+
+Use that HTTPS URL as the Ecwid app page URL after the first successful deployment.
 
 ## Ecwid app registration
 
@@ -83,7 +117,7 @@ Keep `client secret`, secret tokens, and other private credentials out of GitHub
 
 ## Hosting note
 
-If your static host lets you choose a publish directory, use `public/` directly so the app can live at a clean root URL.
+If your static host lets you choose a publish directory, use `build/` so the deployed artifact matches the tested output from the local build pipeline.
 
 ## Marketplace assets status
 

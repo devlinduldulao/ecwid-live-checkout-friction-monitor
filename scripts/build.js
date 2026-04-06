@@ -2,6 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const rootDir = path.join(__dirname, '..');
+const noJekyllFileName = '.nojekyll';
 
 function ensureDirectory(dirPath) {
   fs.mkdirSync(dirPath, { recursive: true });
@@ -37,6 +38,11 @@ function copyOptionalFile(sourcePath, targetPath) {
   fs.copyFileSync(sourcePath, targetPath);
 }
 
+function writeFile(targetPath, content) {
+  ensureDirectory(path.dirname(targetPath));
+  fs.writeFileSync(targetPath, content);
+}
+
 function buildApp(baseDir) {
   const workingRoot = baseDir || rootDir;
   const sourceDir = path.join(workingRoot, 'public');
@@ -45,6 +51,7 @@ function buildApp(baseDir) {
   removeDirectory(outputDir);
   copyRecursive(sourceDir, outputDir);
   copyOptionalFile(path.join(workingRoot, '_headers'), path.join(outputDir, '_headers'));
+  writeFile(path.join(outputDir, noJekyllFileName), '');
 
   return {
     outputDir: outputDir,
@@ -60,4 +67,5 @@ if (require.main === module) {
 
 module.exports = {
   buildApp: buildApp,
+  noJekyllFileName: noJekyllFileName,
 };

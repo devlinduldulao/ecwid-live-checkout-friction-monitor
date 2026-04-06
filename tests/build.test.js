@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 
-const { buildApp } = require('../scripts/build.js');
+const { buildApp, noJekyllFileName } = require('../scripts/build.js');
 
 test('buildApp recreates build output from public assets', function () {
   const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'lcfm-ecwid-build-'));
@@ -26,6 +26,7 @@ test('buildApp recreates build output from public assets', function () {
   assert.equal(fs.readFileSync(path.join(buildDir, 'index.html'), 'utf8'), '<html><body>demo</body></html>');
   assert.equal(fs.readFileSync(path.join(buildDir, 'app.js'), 'utf8'), 'console.log("demo");');
   assert.equal(fs.readFileSync(path.join(buildDir, 'nested', 'asset.txt'), 'utf8'), 'nested');
+  assert.equal(fs.existsSync(path.join(buildDir, noJekyllFileName)), true);
 
   fs.rmSync(tempRoot, { recursive: true, force: true });
 });

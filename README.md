@@ -125,7 +125,17 @@ Or use VS Code Live Server pointed at `public/index.html`.
 
 ## Deployment summary
 
-Deploy only the `public/` directory to a static host, then register that URL as your Ecwid app page. The app reads Ecwid data directly from the iframe context, so there is no server bootstrap or environment file to maintain.
+Deploy the built static output to any static host, then register that URL as your Ecwid app page. The app reads Ecwid data directly from the iframe context, so there is no server bootstrap or environment file to maintain.
+
+For GitHub Pages, this repo now includes a workflow at `.github/workflows/deploy-pages.yml` that runs `npm run check`, builds `build/`, and publishes that artifact on every push to `main`.
+
+The expected GitHub Pages URL for this repository is:
+
+```text
+https://devlinduldulao.github.io/ecwid-live-checkout-friction-monitor/
+```
+
+In the GitHub repository settings, open Pages and set the source to `GitHub Actions` if it is not already selected.
 
 For the current app behavior, the minimal Ecwid scope set is:
 
