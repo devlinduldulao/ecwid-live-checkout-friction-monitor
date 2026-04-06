@@ -113,6 +113,42 @@ async function run() {
       }
     });
 
+    await test('GET /support.html returns 200', async function () {
+      var response = await fetch(`${base}/support.html`);
+      if (response.status !== 200) {
+        throw new Error(`status ${response.status}`);
+      }
+
+      var html = await response.text();
+      if (!html.includes('Support | Live Checkout Friction Monitor')) {
+        throw new Error('missing support page title');
+      }
+    });
+
+    await test('GET /privacy.html returns 200', async function () {
+      var response = await fetch(`${base}/privacy.html`);
+      if (response.status !== 200) {
+        throw new Error(`status ${response.status}`);
+      }
+
+      var html = await response.text();
+      if (!html.includes('Privacy Policy | Live Checkout Friction Monitor')) {
+        throw new Error('missing privacy page title');
+      }
+    });
+
+    await test('GET /terms.html returns 200', async function () {
+      var response = await fetch(`${base}/terms.html`);
+      if (response.status !== 200) {
+        throw new Error(`status ${response.status}`);
+      }
+
+      var html = await response.text();
+      if (!html.includes('Terms of Service | Live Checkout Friction Monitor')) {
+        throw new Error('missing terms page title');
+      }
+    });
+
     console.log(`\nResults: ${passed} passed, ${failed} failed\n`);
 
     server.close(function () {

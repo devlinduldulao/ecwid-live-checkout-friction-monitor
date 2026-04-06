@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Live Checkout Friction Monitor</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://djqizrxa6f10j.cloudfront.net/ecwid-sdk/css/1.3.20/ecwid-app-ui.css">
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+  <main class="merchant-app">
+    <section class="hero-panel a-card">
+      <div class="hero-panel__header">
+        <div>
+          <p class="eyebrow">Privacy Policy</p>
+          <h1>Live Checkout Friction Monitor</h1>
+          <p class="hero-panel__lead">This policy describes the data handling model for the admin-only Ecwid dashboard deployed from this repository.</p>
+        </div>
+      </div>
+      <div class="hero-panel__meta">
+        <div>
+          <span class="hero-panel__label">Effective date</span>
+          <strong>2026-04-06</strong>
+          <span>Applies to the current static deployment of the app.</span>
+        </div>
+        <div>
+          <span class="hero-panel__label">Data model</span>
+          <strong>Direct Ecwid reads</strong>
+          <span>The app reads store data inside the Ecwid admin iframe using the runtime payload token.</span>
+        </div>
+        <div>
+          <span class="hero-panel__label">Storage model</span>
+          <strong>Browser-local only</strong>
+          <span>Owner notes and dashboard preferences stay in the current browser.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-shell">
+      <section class="main-column">
+        <div class="a-card panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">What The App Processes</p>
+              <h2>Operational Store Data</h2>
+            </div>
+          </div>
+          <ul class="signal-list">
+            <li>
+              <div class="signal-list__title">Ecwid admin data</div>
+              <div class="signal-list__meta">Store profile, catalog, categories, and coupon configuration are read to generate the checkout audit.</div>
+            </li>
+            <li>
+              <div class="signal-list__title">Local dashboard settings</div>
+              <div class="signal-list__meta">Preview mode, low-stock threshold, hidden-check preferences, and owner notes may be saved in browser localStorage.</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="a-card panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">What The App Does Not Do</p>
+              <h2>Excluded Data Handling</h2>
+            </div>
+          </div>
+          <ul class="constraint-list">
+            <li>No shopper PII capture, checkout field collection, or payment data storage.</li>
+            <li>No remote database, webhook ingestion, Redis, or always-on backend runtime in this repository deployment.</li>
+            <li>No cross-device synchronization for merchant notes or settings.</li>
+          </ul>
+        </div>
+      </section>
+
+      <aside class="side-column">
+        <div class="a-card panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Privacy Requests</p>
+              <h2>Contact Path</h2>
+            </div>
+          </div>
+          <p>Contact the support channel listed in the live marketplace listing for privacy requests, access questions, or correction requests related to this app.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

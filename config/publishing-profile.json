@@ -1,0 +1,37 @@
+{
+  "appName": "Live Checkout Friction Monitor for Ecwid",
+  "tagline": "Merchant-facing checkout readiness audit for Ecwid.",
+  "shortDescription": "Review checkout friction signals from store profile, catalog, categories, and coupons, preview safe demo data, and keep lightweight merchant notes without a custom backend or database.",
+  "category": "Merchant tools / analytics / operations",
+  "hostBaseUrl": "https://devlinduldulao.github.io/ecwid-live-checkout-friction-monitor",
+  "businessName": "Configured marketplace publisher",
+  "supportEmail": "",
+  "supportResponseWindow": "Reply within 2 business days",
+  "supportTimezone": "UTC",
+  "supportUrl": "https://devlinduldulao.github.io/ecwid-live-checkout-friction-monitor/support.html",
+  "privacyPolicyUrl": "https://devlinduldulao.github.io/ecwid-live-checkout-friction-monitor/privacy.html",
+  "termsOfServiceUrl": "https://devlinduldulao.github.io/ecwid-live-checkout-friction-monitor/terms.html",
+  "demoUrl": "https://devlinduldulao.github.io/ecwid-live-checkout-friction-monitor/",
+  "legalEffectiveDate": "2026-04-06",
+  "privacyContactBlurb": "Contact the support channel listed in the live marketplace listing for privacy requests.",
+  "termsWarrantyBlurb": "This app is provided as described in the active marketplace listing and any separate merchant agreement published with the app.",
+  "screenshots": [
+    "assets/marketplace/screenshot-dashboard.png",
+    "assets/marketplace/screenshot-preview.png",
+    "assets/marketplace/screenshot-settings.png"
+  ],
+  "assets": {
+    "iconSource": "assets/marketplace/icon.svg",
+    "iconPng": "assets/marketplace/icon.png",
+    "listingBannerSource": "assets/marketplace/banner.svg",
+    "listingBannerPng": "assets/marketplace/banner.png"
+  },
+  "technicalNotes": {
+    "hosting": "Static HTTPS hosting",
+    "backendRequired": false,
+    "databaseRequired": false,
+    "redisRequired": false,
+    "primarySurface": "Merchant dashboard",
+    "storefrontBehavior": "Admin-only dashboard with no shopper-side instrumentation"
+  }
+}

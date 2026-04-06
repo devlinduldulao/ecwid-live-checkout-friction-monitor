@@ -26,6 +26,8 @@ Still needed before submission:
 
 Prepare these values before submission:
 
+The canonical draft values for this repo now live in `config/publishing-profile.json` so listing copy, legal URLs, and marketplace asset references stay in one place.
+
 - app name: Live Checkout Friction Monitor
 - short summary: merchant-facing checkout readiness audit for Ecwid
 - full description: what the app audits, what it does not collect, and why it is privacy-first

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support | Live Checkout Friction Monitor</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://djqizrxa6f10j.cloudfront.net/ecwid-sdk/css/1.3.20/ecwid-app-ui.css">
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+  <main class="merchant-app">
+    <section class="hero-panel a-card">
+      <div class="hero-panel__header">
+        <div>
+          <p class="eyebrow">Support</p>
+          <h1>Live Checkout Friction Monitor</h1>
+          <p class="hero-panel__lead">Merchant support information for the Ecwid admin app deployment and marketplace listing.</p>
+        </div>
+      </div>
+      <div class="hero-panel__meta">
+        <div>
+          <span class="hero-panel__label">Response target</span>
+          <strong>Within 2 business days</strong>
+          <span>UTC support window for incoming merchant requests.</span>
+        </div>
+        <div>
+          <span class="hero-panel__label">Support scope</span>
+          <strong>Admin dashboard only</strong>
+          <span>No shopper-side monitoring or hosted backend support is included in this build.</span>
+        </div>
+        <div>
+          <span class="hero-panel__label">Primary contact</span>
+          <strong>Marketplace support channel</strong>
+          <span>Use the support email or contact path published in the live app listing.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-shell">
+      <section class="main-column">
+        <div class="a-card panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Before Contacting Support</p>
+              <h2>Recommended Details</h2>
+            </div>
+          </div>
+          <ul class="signal-list">
+            <li>
+              <div class="signal-list__title">Store ID and app page URL</div>
+              <div class="signal-list__meta">Include the Ecwid store ID and the public app URL where the issue was observed.</div>
+            </li>
+            <li>
+              <div class="signal-list__title">What you expected versus what happened</div>
+              <div class="signal-list__meta">Describe the audit view, action list, or preview behavior that looks incorrect.</div>
+            </li>
+            <li>
+              <div class="signal-list__title">Relevant screenshots</div>
+              <div class="signal-list__meta">Attach dashboard screenshots with sensitive merchant data removed where practical.</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <aside class="side-column">
+        <div class="a-card panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Service Notes</p>
+              <h2>Current Boundaries</h2>
+            </div>
+          </div>
+          <ul class="constraint-list">
+            <li>This app runs as a static admin iframe and reads Ecwid data directly at runtime.</li>
+            <li>Merchant notes and thresholds stay in browser localStorage unless a future version adds remote storage.</li>
+            <li>Support cannot recover browser-local settings that were cleared from the merchant browser.</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>
