@@ -384,3 +384,185 @@ h2 {
     text-align: left;
   }
 }
+
+/* ── Onboarding Banner ── */
+
+.onboarding-banner {
+  background:
+    linear-gradient(135deg, rgba(240, 245, 255, 0.98), rgba(220, 232, 252, 0.9)),
+    var(--panel);
+  border-left: 4px solid var(--signal-info);
+}
+
+.onboarding-banner[hidden] {
+  display: none;
+}
+
+.onboarding-steps {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: grid;
+  gap: 14px;
+  counter-reset: onboarding-step;
+}
+
+.onboarding-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.onboarding-step__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--signal-info);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.onboarding-step__body strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+
+.onboarding-step__body span {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.onboarding-footer {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ── Data Source Banner ── */
+
+.data-source-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.data-source-banner--good {
+  background: rgba(12, 172, 66, 0.08);
+  border-color: rgba(12, 172, 66, 0.3);
+}
+
+.data-source-banner--info {
+  background: rgba(39, 92, 224, 0.08);
+  border-color: rgba(39, 92, 224, 0.3);
+}
+
+.data-source-banner--warn {
+  background: rgba(222, 157, 28, 0.08);
+  border-color: rgba(222, 157, 28, 0.3);
+}
+
+.data-source-banner__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.data-source-banner--good .data-source-banner__icon {
+  background: rgba(12, 172, 66, 0.15);
+  color: var(--signal-good);
+}
+
+.data-source-banner--info .data-source-banner__icon {
+  background: rgba(39, 92, 224, 0.15);
+  color: var(--signal-info);
+}
+
+.data-source-banner--warn .data-source-banner__icon {
+  background: rgba(222, 157, 28, 0.15);
+  color: var(--signal-warn);
+}
+
+.data-source-banner__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.data-source-banner__body strong {
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+.data-source-banner__body span {
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* ── Help Section ── */
+
+.help-section {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.help-item {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #fffdfa;
+}
+
+.help-item__title {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+.help-item__body {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.help-item__body strong {
+  color: var(--ink);
+}
+
+/* ── Preview banner label when in sample mode ── */
+
+.metric-card__sample-tag {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(39, 92, 224, 0.12);
+  color: var(--signal-info);
+}

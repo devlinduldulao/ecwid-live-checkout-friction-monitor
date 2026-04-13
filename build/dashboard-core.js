@@ -511,16 +511,92 @@
     };
   }
 
+  function getDataSourceBanner(input) {
+    var mode = resolveAuditMode(input);
+
+    if (mode === 'live') {
+      return {
+        tone: 'good',
+        icon: 'live',
+        headline: 'Live Data',
+        detail: 'These metrics reflect your real Ecwid store. All numbers come from your store\'s current configuration and catalog.',
+      };
+    }
+
+    if (mode === 'preview') {
+      return {
+        tone: 'info',
+        icon: 'preview',
+        headline: 'Sample Data',
+        detail: 'These metrics use demo data for illustration purposes only. They do not reflect your real store. Turn off Preview Mode to see live data.',
+      };
+    }
+
+    return {
+      tone: 'warn',
+      icon: 'standalone',
+      headline: 'No Store Connection',
+      detail: 'Open this app from your Ecwid admin dashboard to see your real store data, or enable Preview Mode below to explore with sample data.',
+    };
+  }
+
+  function getOnboardingSteps() {
+    return [
+      {
+        number: '1',
+        title: 'Install the app in Ecwid',
+        detail: 'Add this app from the Ecwid App Market. Once installed, open it from your Ecwid admin sidebar.',
+      },
+      {
+        number: '2',
+        title: 'View your live audit automatically',
+        detail: 'When opened inside Ecwid admin, the dashboard reads your real store data and shows checkout friction metrics instantly. No setup needed.',
+      },
+      {
+        number: '3',
+        title: 'Use Preview Mode to explore safely',
+        detail: 'Toggle Preview Mode on to see the dashboard with safe sample data. This is useful for demos or learning how the app works before connecting your store.',
+      },
+    ];
+  }
+
+  var ONBOARDING_KEY = 'live-checkout-friction-monitor:onboarding-dismissed';
+
+  function isOnboardingDismissed(storage) {
+    if (!storage || typeof storage.getItem !== 'function') {
+      return false;
+    }
+    return storage.getItem(ONBOARDING_KEY) === 'true';
+  }
+
+  function dismissOnboarding(storage) {
+    if (storage && typeof storage.setItem === 'function') {
+      storage.setItem(ONBOARDING_KEY, 'true');
+    }
+  }
+
+  function resetOnboarding(storage) {
+    if (storage && typeof storage.removeItem === 'function') {
+      storage.removeItem(ONBOARDING_KEY);
+    }
+  }
+
   return {
     clearSettings: clearSettings,
     buildDashboard: buildDashboard,
     createEcwidApiRequest: createEcwidApiRequest,
     createPreviewData: createPreviewData,
     defaultSettings: defaultSettings,
+    dismissOnboarding: dismissOnboarding,
+    getDataSourceBanner: getDataSourceBanner,
     getEcwidLiveRequests: getEcwidLiveRequests,
+    getOnboardingSteps: getOnboardingSteps,
     getPreviewUiState: getPreviewUiState,
+    isOnboardingDismissed: isOnboardingDismissed,
     loadSettings: loadSettings,
     normalizeCollection: normalizeCollection,
+    ONBOARDING_KEY: ONBOARDING_KEY,
+    resetOnboarding: resetOnboarding,
     resolveEcwidLiveAudit: resolveEcwidLiveAudit,
     resolveAuditMode: resolveAuditMode,
     sanitizeSettings: sanitizeSettings,

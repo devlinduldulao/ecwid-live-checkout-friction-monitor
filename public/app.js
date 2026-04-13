@@ -13,7 +13,12 @@
   var elements = {
     checks: document.getElementById('checks-list'),
     connectionStatus: document.getElementById('connection-status'),
+    dataSourceBanner: document.getElementById('data-source-banner'),
+    dataSourceDetail: document.getElementById('data-source-detail'),
+    dataSourceHeadline: document.getElementById('data-source-headline'),
+    dataSourceIcon: document.getElementById('data-source-icon'),
     dataStatuses: document.getElementById('data-statuses'),
+    dismissOnboarding: document.getElementById('dismiss-onboarding'),
     lastRefresh: document.getElementById('dashboard-last-refresh'),
     hideHealthyChecks: document.getElementById('hide-healthy-checks'),
     lowStockThreshold: document.getElementById('low-stock-threshold'),
@@ -21,9 +26,12 @@
     merchantName: document.getElementById('merchant-name'),
     merchantProfile: document.getElementById('merchant-profile'),
     metrics: document.getElementById('metrics-grid'),
+    onboardingBanner: document.getElementById('onboarding-banner'),
+    onboardingSteps: document.getElementById('onboarding-steps'),
     opportunities: document.getElementById('opportunities-list'),
     ownerNotes: document.getElementById('owner-notes'),
     previewMode: document.getElementById('preview-mode'),
+    previewPanelCard: document.getElementById('preview-panel-card'),
     previewStatus: document.getElementById('preview-status'),
     previewSummary: document.getElementById('preview-summary'),
     previewToggle: document.getElementById('preview-toggle'),
@@ -35,10 +43,12 @@
     scoreSummary: document.getElementById('score-summary'),
     scoreValue: document.getElementById('score-value'),
     settingsStatus: document.getElementById('settings-status'),
+    showOnboarding: document.getElementById('show-onboarding'),
     sourcePill: document.getElementById('source-pill'),
   };
 
   bindEvents();
+  renderOnboarding();
   boot();
 
   function boot() {
@@ -108,6 +118,18 @@
 
     elements.previewMode.addEventListener('change', function () {
       setPreviewMode(elements.previewMode.checked, 'Preview preference updated.');
+    });
+
+    elements.dismissOnboarding.addEventListener('click', function () {
+      core.dismissOnboarding(window.localStorage);
+      elements.onboardingBanner.hidden = true;
+      resizeIframe();
+    });
+
+    elements.showOnboarding.addEventListener('click', function () {
+      core.resetOnboarding(window.localStorage);
+      elements.onboardingBanner.hidden = false;
+      resizeIframe();
     });
   }
 
@@ -260,8 +282,13 @@
       previewMode: state.settings.previewMode,
       runtimeMode: state.mode,
     });
+    var auditMode = core.resolveAuditMode({
+      previewMode: state.settings.previewMode,
+      runtimeMode: state.mode,
+    });
 
-    renderMetrics(dashboard.metrics);
+    renderDataSourceBanner();
+    renderMetrics(dashboard.metrics, auditMode);
     renderSignalList(elements.priorities, dashboard.priorities, dashboard.settings.hideHealthyChecks ? 'No warnings to show.' : 'No high-priority actions right now.');
     renderSignalList(
       elements.checks,
@@ -296,13 +323,15 @@
     elements.previewSummary.textContent = previewUi.summaryText;
   }
 
-  function renderMetrics(metrics) {
+  function renderMetrics(metrics, auditMode) {
+    var isSample = auditMode === 'preview';
     elements.metrics.innerHTML = metrics.map(function (metric) {
       return '' +
         '<article class="metric-card metric-card--' + escapeHtml(metric.tone) + '">' +
           '<span class="metric-card__label">' + escapeHtml(metric.label) + '</span>' +
           '<strong class="metric-card__value">' + escapeHtml(metric.value) + '</strong>' +
           '<div class="metric-card__detail">' + escapeHtml(metric.detail) + '</div>' +
+          (isSample ? '<span class="metric-card__sample-tag">Sample</span>' : '') +
         '</article>';
     }).join('');
   }
@@ -353,6 +382,37 @@
   function setConnection(message, tone) {
     elements.connectionStatus.className = 'pill pill--' + tone;
     elements.connectionStatus.textContent = message;
+  }
+
+  function renderOnboarding() {
+    var dismissed = core.isOnboardingDismissed(window.localStorage);
+    elements.onboardingBanner.hidden = dismissed;
+
+    var steps = core.getOnboardingSteps();
+    elements.onboardingSteps.innerHTML = steps.map(function (step) {
+      return '' +
+        '<li class="onboarding-step">' +
+          '<span class="onboarding-step__number">' + escapeHtml(step.number) + '</span>' +
+          '<div class="onboarding-step__body">' +
+            '<strong>' + escapeHtml(step.title) + '</strong>' +
+            '<span>' + escapeHtml(step.detail) + '</span>' +
+          '</div>' +
+        '</li>';
+    }).join('');
+  }
+
+  function renderDataSourceBanner() {
+    var banner = core.getDataSourceBanner({
+      previewMode: state.settings.previewMode,
+      runtimeMode: state.mode,
+    });
+
+    var iconMap = { live: '\u25CF', preview: '\u25CB', standalone: '\u25B2' };
+
+    elements.dataSourceBanner.className = 'data-source-banner data-source-banner--' + banner.tone;
+    elements.dataSourceIcon.textContent = iconMap[banner.icon] || '\u25CF';
+    elements.dataSourceHeadline.textContent = banner.headline;
+    elements.dataSourceDetail.textContent = banner.detail;
   }
 
   function resizeIframe() {

@@ -48,7 +48,28 @@
 
     <section class="grid-shell">
       <section class="main-column">
-        <div class="a-card panel preview-panel">
+        <div class="a-card panel onboarding-banner" id="onboarding-banner">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Getting Started</p>
+              <h2>How to use this app</h2>
+            </div>
+            <button type="button" class="btn btn-secondary btn-medium" id="dismiss-onboarding" aria-label="Dismiss getting started guide">Got it, dismiss</button>
+          </div>
+          <ol class="onboarding-steps" id="onboarding-steps">
+          </ol>
+          <p class="onboarding-footer">You can always find this guide again in the Help section on the sidebar.</p>
+        </div>
+
+        <div class="data-source-banner" id="data-source-banner" role="status" aria-live="polite">
+          <div class="data-source-banner__icon" id="data-source-icon"></div>
+          <div class="data-source-banner__body">
+            <strong id="data-source-headline">Checking data source</strong>
+            <span id="data-source-detail">Determining where your metrics come from.</span>
+          </div>
+        </div>
+
+        <div class="a-card panel preview-panel" id="preview-panel-card">
           <div class="preview-panel__copy">
             <div>
               <p class="eyebrow">Owner Preview Mode</p>
@@ -152,6 +173,34 @@
           <ul class="signal-list" id="data-statuses">
             <li class="signal-list__empty">No source calls yet.</li>
           </ul>
+        </div>
+
+        <div class="a-card panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Help &amp; Info</p>
+              <h2>Understanding Your Data</h2>
+            </div>
+          </div>
+          <div class="help-section">
+            <div class="help-item">
+              <strong class="help-item__title">Where is my real data?</strong>
+              <p class="help-item__body">Open this app from your <strong>Ecwid admin dashboard</strong>. The audit reads your real store profile, products, categories, and coupons automatically. No setup required.</p>
+            </div>
+            <div class="help-item">
+              <strong class="help-item__title">What does the audit score mean?</strong>
+              <p class="help-item__body">The score (0–100) grades your store's checkout readiness based on catalog health, imagery, descriptions, inventory, and merchant contact info. Higher is better.</p>
+            </div>
+            <div class="help-item">
+              <strong class="help-item__title">How do I know if data is real or sample?</strong>
+              <p class="help-item__body">Check the colored banner above the metrics. <strong>Green = live store data</strong>. <strong>Blue = sample/demo data</strong>. The Ecwid Sources panel below also shows each API call's status.</p>
+            </div>
+            <div class="help-item">
+              <strong class="help-item__title">Settings are browser-local only</strong>
+              <p class="help-item__body">Your preferences and notes are stored in this browser. They won't appear on other devices or browsers. No data leaves your machine.</p>
+            </div>
+            <button type="button" class="btn btn-secondary btn-medium" id="show-onboarding">Show getting started guide</button>
+          </div>
         </div>
 
         <div class="a-card panel">

@@ -471,3 +471,75 @@ test('resolveEcwidLiveAudit tolerates missing error objects with a default failu
   assert.equal(result.sources[2].message, 'Request failed.');
   assert.equal(result.sources[3].message, 'Request failed.');
 });
+
+// ── Data Source Banner Tests ──
+
+test('getDataSourceBanner returns live banner for ecwid mode without preview', function () {
+  const banner = core.getDataSourceBanner({ previewMode: false, runtimeMode: 'ecwid' });
+
+  assert.equal(banner.tone, 'good');
+  assert.equal(banner.icon, 'live');
+  assert.equal(banner.headline, 'Live Data');
+  assert.match(banner.detail, /real Ecwid store/i);
+});
+
+test('getDataSourceBanner returns sample banner when preview is on', function () {
+  const banner = core.getDataSourceBanner({ previewMode: true, runtimeMode: 'ecwid' });
+
+  assert.equal(banner.tone, 'info');
+  assert.equal(banner.icon, 'preview');
+  assert.equal(banner.headline, 'Sample Data');
+  assert.match(banner.detail, /demo data/i);
+});
+
+test('getDataSourceBanner returns standalone warning when outside ecwid', function () {
+  const banner = core.getDataSourceBanner({ previewMode: false, runtimeMode: 'standalone' });
+
+  assert.equal(banner.tone, 'warn');
+  assert.equal(banner.icon, 'standalone');
+  assert.equal(banner.headline, 'No Store Connection');
+  assert.match(banner.detail, /Ecwid admin dashboard/i);
+});
+
+// ── Onboarding Tests ──
+
+test('getOnboardingSteps returns three numbered steps', function () {
+  const steps = core.getOnboardingSteps();
+
+  assert.equal(steps.length, 3);
+  assert.equal(steps[0].number, '1');
+  assert.equal(steps[1].number, '2');
+  assert.equal(steps[2].number, '3');
+  assert.ok(steps[0].title.length > 0);
+  assert.ok(steps[0].detail.length > 0);
+  assert.ok(steps[1].title.length > 0);
+  assert.ok(steps[2].title.length > 0);
+});
+
+test('isOnboardingDismissed returns false when storage is empty or unavailable', function () {
+  assert.equal(core.isOnboardingDismissed(null), false);
+  assert.equal(core.isOnboardingDismissed(createMemoryStorage()), false);
+});
+
+test('dismissOnboarding and isOnboardingDismissed round-trip correctly', function () {
+  const storage = createMemoryStorage();
+
+  assert.equal(core.isOnboardingDismissed(storage), false);
+
+  core.dismissOnboarding(storage);
+  assert.equal(core.isOnboardingDismissed(storage), true);
+});
+
+test('resetOnboarding clears the dismissed state', function () {
+  const storage = createMemoryStorage();
+
+  core.dismissOnboarding(storage);
+  assert.equal(core.isOnboardingDismissed(storage), true);
+
+  core.resetOnboarding(storage);
+  assert.equal(core.isOnboardingDismissed(storage), false);
+});
+
+test('ONBOARDING_KEY is a stable storage key', function () {
+  assert.equal(core.ONBOARDING_KEY, 'live-checkout-friction-monitor:onboarding-dismissed');
+});
